@@ -9,9 +9,10 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class FORMULARIO {
+    static Scanner teclado = new Scanner(System.in);
+
     static void iniciarPrograma() {
         String caso1, escuela, clave, nombrecompleto, turno, telefono, correo, fecha, nombres, narracion, aspecto, dato;
-        String reportaje;
 
         int caso, esAnonimo;
 
@@ -25,7 +26,6 @@ public class FORMULARIO {
         System.out.println("integridad de los alumnos. ");
         entrada.nextLine();
 
-        Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce la opcion segun el caso de reporte");
         System.out.println("1. Acoso escolar");
         System.out.println("2. Abuso");
@@ -149,24 +149,16 @@ public class FORMULARIO {
         System.out.println("Quedara tambien redactado en un Acta de Hechos que será elaborada");
         System.out.println("por personal de la dirección y en colaboración con quien ha referido el caso");
         System.out.println("ante la percepción de indicadores de riesgo.");
-        reportaje = entrada.nextLine();
-          
-           int respuesta;
-           do {
-                 
-                iniciarPrograma(); 
-                System.out.println("Desea hacer otro reporte?");
-                System.out.println("1. Si");
-                System.out.println("2.No");
-                respuesta = teclado.nextInt();
-       
-              }
-           while(respuesta == 1);
-            
-       
-         }
-        
+    }
 
-    
-   }
-
+    public static void main(String[] args) {
+        int respuesta;
+        do {
+            iniciarPrograma();
+            System.out.println("Desea hacer otro reporte?");
+            System.out.println("1. Si");
+            System.out.println("2.No");
+            respuesta = teclado.nextInt();
+        } while (respuesta == 1);
+    }
+}
