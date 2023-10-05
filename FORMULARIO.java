@@ -13,7 +13,7 @@ public class FORMULARIO {
         String caso1, escuela, clave, nombrecompleto, turno, telefono, correo, fecha, nombres, narracion, aspecto, dato;
         String reportaje;
 
-        int caso, esAnonimo, respuesta;
+        int caso, esAnonimo;
 
         Scanner entrada = new Scanner(System.in); // creando un objeto la scanner para la entrada de datos
         System.out.println("REPORTE DE CASOS DE ITS   ");
@@ -151,25 +151,22 @@ public class FORMULARIO {
         System.out.println("ante la percepción de indicadores de riesgo.");
         reportaje = entrada.nextLine();
           
-             
-           do
-           {
+           int respuesta;
+           do {
+                 
+                iniciarPrograma(); 
                 System.out.println("Desea hacer otro reporte?");
                 System.out.println("1. Si");
-               System.out.println("2.No");
-
-                if (respuesta == 1) {
-                 iniciarPrograma();
-                
-                   }
-             else{
+                System.out.println("2.No");
+                respuesta = teclado.nextInt();
+       
+              }
+           while(respuesta == 1);
             
-             }while(respuesta == 1);
-          
        
          }
         
 
     
    }
-}
+
